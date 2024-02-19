@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+
+<!--This Div prints out a introductory paragraph to the calculator page-->
+<div class="text-center">
+    <h1 class="display-3 mb-4">Calculator</h1>
+</div>
+<div class="text-center">
+    <p style="font-size: 15px">
+        As a part of this website, there is calculator for you to see how much I charge for reccommending,
+        choosing and teaching others to play board games. I will teach you or a group you have organized 
+        on how to play a board game and be there to help facilitate your experience. I also will help reccommend
+        a board game based on your likes. Overall, I am here to help with anything you will need! 
+    </p>
+</div>
+
+<br/>
+
+<!--Customer container made for the calculator and its accommpaning text-->
+<style>
+    .custom-container {
+        border: 10px solid #000000; 
+        border-radius: 8px; 
+        padding: 20px; 
+        margin-top: 20px;
+    }
+</style>
+
+<!--Text for introducting the calcuator and how -->
+<div class="container custom-container">
+    <div class="row">
+        
+        <div class="col-md-4 mb-4">
+            <p class="text-left">
+                Please input the amount of hours you would like for my services then click "Submit" and
+                you can then see the cost for my services.
+            </p>
+        </div>
+
+<!--A Form and the buttoms and labels/inputs for calculating the cost-->
+        <div class="col-md-8">
+            <form id="calculatorForm">
+                <div class="form-group">
+                    <label for="hours">Number of Hours:</label>
+                    <input type="number" class="form-control" id="hours" required min="0">
+                    <small class="form-text text-danger" id="hoursError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="hourlyRate">Hourly Rate:</label>
+                    <input type="text" class="form-control" id="hourlyRate" value="$20/Hour" readonly>
+                </div>
+
+                <button type="button" class="btn btn-primary" id="calculateButton">Submit</button>
+
+                <div class="form-group mt-3">
+                    <label for="totalCost">Total Cost:</label>
+                    <input type="text" class="form-control" id="totalCost" readonly>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
